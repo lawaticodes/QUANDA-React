@@ -1,3 +1,11 @@
+.Header {
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
+}
+
+.Footer {
+  font-style: italic;
 }
