@@ -1,6 +1,10 @@
 import React from 'react';
-import Forum from './forum/Forum.js';
+
 import './App.css';
+
+import Bundle from './bundle/Bundle.js';
+import Forum from './forum/Forum.js';
+import Release from './release/Release.js';
 
 class Quanda extends React.Component {
   render() {
@@ -11,7 +15,9 @@ class Quanda extends React.Component {
         </div>
         <div className="Content">
           <p>Welcome to Quanda.</p>
-          <Forum />
+          <Forum/>
+          <Bundle/>
+          <Release/>
         </div>
         <div className="Footer">
             <p>This is the footer.</p>
