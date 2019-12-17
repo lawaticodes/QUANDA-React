@@ -1,7 +1,29 @@
+@font-face {
+  font-family: 'league_monosemibold';
+  src: url('fonts/leaguemono-semibold-webfont.woff2') format('woff2'),
+       url('fonts/leaguemono-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(135deg, rgba(0,10,36,1) 11%, rgba(9,36,121,1) 47%, rgba(154,0,255,1) 100%);
+  height: 100vh;
+  color: white;
+  font-family: 'league_monosemibold';
+  font-size: large;
+}
+
 .menu-icon {
   font-weight: bold;
+  padding-left: 20px;
 }
 
 .content {
   text-align: center;
+}
+
+.title {
+  font-size: 12vh;
+  padding-top: 30px;
 }

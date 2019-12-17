@@ -14,10 +14,9 @@ class Quanda extends React.Component {
           <p>MENU</p>
         </div>
         <div className="content">
-          <p>QUANDA</p>
-          <Forum/>
-          <Bundle/>
-          <Release/>
+          <div className="title">
+            <h1>QUANDA.</h1>
+          </div>
         </div>
       </React.Fragment>
     );
