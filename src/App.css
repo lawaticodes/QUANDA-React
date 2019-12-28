@@ -19,12 +19,6 @@ h1 {
   margin: 0px;
 }
 
-h2 {
-  padding-left: 3px;
-  font-size: 15px;
-  margin: 0px;
-}
-
 p {
   margin: 0px;
 }
@@ -60,12 +54,12 @@ p {
   padding: 5px;
   margin-left: 15px;
   margin-right: 15px;
-  background-color: #DC2EE4;
+  background-color: #AA19B0;
   color: white;
   font-family: 'league_monosemibold';
   font-size: medium;
   width: 25vh;
   border: none;
   border-radius: 6px;
-  box-shadow: 1px 1px 3px 2px #5E2061;
+  box-shadow: 1px 1px 3px 2px #14104A;
 }
