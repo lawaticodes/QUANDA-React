@@ -14,16 +14,58 @@ body {
   font-size: large;
 }
 
-.menu-icon {
-  font-weight: bold;
+h1 {
+  font-size: 20vh;
+  margin: 0px;
+}
+
+h2 {
+  padding-left: 3px;
+  font-size: 15px;
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.menu {
   padding-left: 20px;
+  padding-top: 20px;
+  font-size: 41px;
 }
 
 .content {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
 
-.title {
-  font-size: 12vh;
-  padding-top: 30px;
+.landing-text {
+  text-align: left;
+  padding-bottom: 15vh;
+  margin: 0px;
+  font-size: x-large;
+}
+
+.landing-buttons {
+  margin-top: 8vh;
+  padding-left: 20vh;
+  display: flex;
+  font-size: medium;
+}
+
+.button {
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #DC2EE4;
+  color: white;
+  font-family: 'league_monosemibold';
+  font-size: medium;
+  width: 25vh;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px 2px #5E2061;
 }
