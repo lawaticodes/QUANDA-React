@@ -1,9 +1,7 @@
 import React from 'react';
-import { Button, Icon } from 'antd';
+import { Icon } from 'antd';
 
-import Bundle from './bundle/Bundle.js';
-import Forum from './forum/Forum.js';
-import Release from './release/Release.js';
+import Landing from './landing/Landing.js';
 
 import './App.css';
 
@@ -12,18 +10,10 @@ class Quanda extends React.Component {
     return (
       <React.Fragment>
         <div className="menu">
-          <Icon type="menu" className="menu-icon"/>
+          <Icon type="menu"/>
         </div>
         <div className="content">
-          <div className="landing-text">
-            <h1>QUANDA</h1>
-            <p>A space for open discussions and communication.</p>
-            <div className="landing-buttons">
-              <Button className="button">LOG IN</Button>
-              <p>or</p>
-              <Button className="button">SIGN UP</Button>
-            </div>
-          </div>
+          <Landing/>
         </div>
       </React.Fragment>
     );

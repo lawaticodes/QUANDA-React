@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'league_monosemibold';
+  src: url('./../fonts/leaguemono-semibold-webfont.woff2') format('woff2'),
+       url('./../fonts/leaguemono-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 20vh;
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.landing {
+  text-align: left;
+  padding-bottom: 15vh;
+  margin: 0px;
+  font-size: x-large;
+}
+
+.landing-buttons {
+  margin-top: 8vh;
+  padding-left: 20vh;
+  display: flex;
+  font-size: medium;
+}
+
+.button {
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: #AA19B0;
+  color: white;
+  font-family: 'league_monosemibold';
+  font-size: medium;
+  width: 25vh;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px 2px #14104A;
+}
