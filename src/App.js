@@ -28,7 +28,7 @@ class Quanda extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="menu">
+        <div className="menu-icon-wrapper">
           <Icon type="menu" className="menu-icon" onClick={this.handleMenuClick}/>
         </div>
         <div className="content">
