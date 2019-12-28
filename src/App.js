@@ -16,8 +16,8 @@ class Quanda extends React.Component {
         </div>
         <div className="content">
           <div className="landing-text">
-            <h1>QUANDA,</h1>
-            <p>a space for open discussions and communication.</p>
+            <h1>QUANDA</h1>
+            <p>A space for open discussions and communication.</p>
             <div className="landing-buttons">
               <Button className="button">LOG IN</Button>
               <p>or</p>
