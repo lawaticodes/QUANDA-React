@@ -26,3 +26,5 @@ body {
   justify-content: center;
   height: 80vh;
 }
+
+.menu-icon:focus {outline: 0}
