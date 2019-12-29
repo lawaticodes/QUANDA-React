@@ -1,8 +1,8 @@
 import React from 'react';
 import { Icon } from 'antd';
 
-import Landing from './landing/Landing.js';
-import LandingMenu from './menus/Menus.js';
+import Landing from './other/Landing.js';
+import LandingMenu from './other/Menus.js';
 
 import './App.css';
 
