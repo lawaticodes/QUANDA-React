@@ -1,6 +1,7 @@
-import React from 'react';
 import { Icon } from 'antd';
+import React from 'react';
 
+import { LogInForm, SignUpForm } from './other/Forms.js';
 import Landing from './other/Landing.js';
 import LandingMenu from './other/Menus.js';
 
@@ -10,9 +11,15 @@ class Quanda extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+      loggingIn: false,
+      signingUp: false
     };
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.handleLogIn = this.handleLogIn.bind(this);
+    this.handleLoggedIn = this.handleLoggedIn.bind(this);
+    this.handleSignUp = this.handleSignUp.bind(this);
+    this.handleSignedUp = this.handleSignedUp.bind(this);
   }
 
   handleMenuClick() {
@@ -23,8 +30,33 @@ class Quanda extends React.Component {
     }
   }
 
+  handleLogIn() {
+    this.setState({loggingIn: true});
+  }
+
+  handleLoggedIn() {
+    this.setState({loggingIn: false});
+  }
+
+  handleSignUp() {
+    this.setState({signingUp: true});
+  }
+
+  handleSignedUp() {
+    this.setState({signingUp: false});
+  }
+
   render() {
-    const menuOpen = this.state.menuOpen;
+    let content;
+    if (this.state.menuOpen) {
+      content = <LandingMenu/>
+    } else if (this.state.loggingIn) {
+      content = <LogInForm handleLoggedIn={this.handleLoggedIn}/>
+    } else if (this.state.signingUp) {
+      content = <SignUpForm handleSignedUp={this.handleSignedUp}/>
+    } else {
+      content = <Landing handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp}/>
+    }
 
     return (
       <React.Fragment>
@@ -32,7 +64,7 @@ class Quanda extends React.Component {
           <Icon type="menu" className="menu-icon" onClick={this.handleMenuClick}/>
         </div>
         <div className="content">
-          {menuOpen ? <LandingMenu/> : <Landing/>}
+          {content}
         </div>
       </React.Fragment>
     );

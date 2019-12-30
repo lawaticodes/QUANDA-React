@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'league_monosemibold';
+  src: url('./../fonts/leaguemono-semibold-webfont.woff2') format('woff2'),
+       url('./../fonts/leaguemono-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+form {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(36,0,29,1) 0%, rgba(65,103,215,1) 0%, rgba(157,65,217,1) 100%);
+  box-shadow: 1px 1px 8px 4px #14104A;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-button {
+  margin-bottom: 30px;
+}
+
+.input {
+  font-family: 'league_monosemibold';
+  height: 20px;
+  margin: 10px;
+  width: 350px;
+}
+
+.log-in-button {
+  margin-bottom: 40px;
+}
+
+.log-in-form {
+  height: 50vh;
+  width: 80vh;
+}
+
+.sign-in-form {
+  height: 65vh;
+  width: 100vh;
+}
+
+.title {
+  margin-top: 20px;
+  text-align: center;
+  width: 80vh;
+}
