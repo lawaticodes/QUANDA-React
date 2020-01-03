@@ -2,6 +2,7 @@ import { Icon } from 'antd';
 import React from 'react';
 
 import { LogInForm, SignUpForm } from './other/Forms.js';
+import Homepage from './other/Homepage.js';
 import Landing from './other/Landing.js';
 import LandingMenu from './other/Menus.js';
 
@@ -48,6 +49,10 @@ class Quanda extends React.Component {
   }
 
   render() {
+    if (this.state.loggedIn) {
+      return(<Homepage/>);
+    }
+
     let content;
 
     if (this.state.menuOpen) {

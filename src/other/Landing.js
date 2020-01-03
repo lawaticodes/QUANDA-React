@@ -11,7 +11,7 @@ class Landing extends React.Component {
   }
 
 	render() {
-    const initialLanding = (
+    return(
       <div className="landing">
         <h1>QUANDA</h1>
         <p>A space for open discussions and communication.</p>
@@ -22,12 +22,6 @@ class Landing extends React.Component {
         </div>
       </div>
     );
-
-    if (this.props.loggedIn) {
-      return(<Homepage/>);
-    } else {
-      return(initialLanding);
-    }
 	}
 }
 
