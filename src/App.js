@@ -11,15 +11,23 @@ class Quanda extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false,
       loggingIn: false,
+      menuOpen: false,
       signingUp: false
     };
-    this.handleMenuClick = this.handleMenuClick.bind(this);
-    this.handleLogIn = this.handleLogIn.bind(this);
     this.handleLoggedIn = this.handleLoggedIn.bind(this);
-    this.handleSignUp = this.handleSignUp.bind(this);
+    this.handleLogIn = this.handleLogIn.bind(this);
+    this.handleMenuClick = this.handleMenuClick.bind(this);
     this.handleSignedUp = this.handleSignedUp.bind(this);
+    this.handleSignUp = this.handleSignUp.bind(this);
+  }
+
+  handleLoggedIn() {
+    this.setState({loggingIn: false});
+  }
+
+  handleLogIn() {
+    this.setState({loggingIn: true});
   }
 
   handleMenuClick() {
@@ -30,24 +38,17 @@ class Quanda extends React.Component {
     }
   }
 
-  handleLogIn() {
-    this.setState({loggingIn: true});
-  }
-
-  handleLoggedIn() {
-    this.setState({loggingIn: false});
+  handleSignedUp() {
+    this.setState({signingUp: false});
   }
 
   handleSignUp() {
     this.setState({signingUp: true});
   }
 
-  handleSignedUp() {
-    this.setState({signingUp: false});
-  }
-
   render() {
     let content;
+
     if (this.state.menuOpen) {
       content = <LandingMenu/>
     } else if (this.state.loggingIn) {
