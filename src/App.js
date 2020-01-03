@@ -11,6 +11,7 @@ class Quanda extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loggedIn: false,
       loggingIn: false,
       menuOpen: false,
       signingUp: false
@@ -23,7 +24,7 @@ class Quanda extends React.Component {
   }
 
   handleLoggedIn() {
-    this.setState({loggingIn: false});
+    this.setState({loggingIn: false, loggedIn: true});
   }
 
   handleLogIn() {
@@ -56,7 +57,7 @@ class Quanda extends React.Component {
     } else if (this.state.signingUp) {
       content = <SignUpForm handleSignedUp={this.handleSignedUp}/>
     } else {
-      content = <Landing handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp}/>
+      content = <Landing loggedIn={this.state.loggedIn} handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp}/>
     }
 
     return (
