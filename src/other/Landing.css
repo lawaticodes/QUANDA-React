@@ -1,9 +1,26 @@
+.button {
+  background-color: #AA19B0;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px 2px #14104A;
+  color: white;
+  cursor: pointer;
+  font-family: 'league_monosemibold';
+  font-size: medium;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 5px;
+  width: 25vh;
+}
+
+.button:focus {outline: 0}
+
 @font-face {
   font-family: 'league_monosemibold';
+  font-style: normal;
+  font-weight: normal;
   src: url('./../fonts/leaguemono-semibold-webfont.woff2') format('woff2'),
        url('./../fonts/leaguemono-semibold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 h1 {
@@ -11,37 +28,20 @@ h1 {
   margin: 0px;
 }
 
-p {
-  margin: 0px;
-}
-
 .landing {
-  text-align: left;
-  padding-bottom: 15vh;
-  margin: 0px;
   font-size: x-large;
+  margin: 0px;
+  padding-bottom: 15vh;
+  text-align: left;
 }
 
 .landing-buttons {
-  margin-top: 8vh;
-  padding-left: 20vh;
   display: flex;
   font-size: medium;
+  margin-top: 8vh;
+  padding-left: 20vh;
 }
 
-.button {
-  cursor: pointer;
-  padding: 5px;
-  margin-left: 15px;
-  margin-right: 15px;
-  background-color: #AA19B0;
-  color: white;
-  font-family: 'league_monosemibold';
-  font-size: medium;
-  width: 25vh;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 1px 1px 3px 2px #14104A;
+p {
+  margin: 0px;
 }
-
-.button:focus {outline: 0}
