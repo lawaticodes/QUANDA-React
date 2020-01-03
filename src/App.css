@@ -24,7 +24,6 @@ body {
 .menu-icon:focus {outline: 0}
 
 .menu-icon-wrapper {
-  cursor: pointer;
   font-size: 41px;
   padding-left: 20px;
   padding-top: 20px;

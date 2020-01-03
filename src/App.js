@@ -50,7 +50,7 @@ class Quanda extends React.Component {
     let content;
 
     if (this.state.menuOpen) {
-      content = <LandingMenu/>
+      content = <LandingMenu handleMenuClick={this.handleMenuClick}/>
     } else if (this.state.loggingIn) {
       content = <LogInForm handleLoggedIn={this.handleLoggedIn}/>
     } else if (this.state.signingUp) {
@@ -61,7 +61,7 @@ class Quanda extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="menu-icon-wrapper">
+        <div className="menu-icon-wrapper link">
           <Icon type="menu" className="menu-icon" onClick={this.handleMenuClick}/>
         </div>
         <div className="content">

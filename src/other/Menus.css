@@ -12,6 +12,8 @@ h3 {
   width: 60vh;
 }
 
+.link {cursor: pointer}
+
 .options {
   margin: 13vh;
 }
