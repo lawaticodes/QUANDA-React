@@ -1,0 +1,29 @@
+.avatar {
+  height: 35vh;
+  width: 35vh;
+}
+
+.bundle-notifications {
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.forum-notifications {
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+
+.notifications {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  justify-content: center;
+  margin-left: 10vh;
+}
+
+.profile {
+  height: 45vh;
+  margin-right: 10vh;
+  text-align: center;
+}
