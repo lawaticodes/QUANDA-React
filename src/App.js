@@ -4,7 +4,7 @@ import React from 'react';
 import { LogInForm, SignUpForm } from './other/Forms.js';
 import Homepage from './other/Homepage.js';
 import Landing from './other/Landing.js';
-import LandingMenu from './other/Menus.js';
+import { LandingMenu } from './other/Menus.js';
 
 import './App.css';
 
@@ -50,7 +50,7 @@ class Quanda extends React.Component {
 
   render() {
     if (this.state.loggedIn) {
-      return(<Homepage/>);
+      return(<Homepage menuOpen={this.state.menuOpen} handleMenuClick={this.handleMenuClick}/>);
     }
 
     let content;

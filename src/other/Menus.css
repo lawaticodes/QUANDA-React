@@ -5,11 +5,19 @@ h3 {
 }
 
 .landing-menu {
+  height: 60vh;
+  width: 60vh;
+}
+
+.main-menu {
+  height: 65vh;
+  width: 65vh;
+}
+
+.menu {
   background: linear-gradient(135deg, rgba(36,0,29,1) 0%, rgba(65,103,215,1) 0%, rgba(157,65,217,1) 100%);
   box-shadow: 1px 1px 8px 4px #14104A;
   font-size: x-large;
-  height: 60vh;
-  width: 60vh;
 }
 
 .link {cursor: pointer}
