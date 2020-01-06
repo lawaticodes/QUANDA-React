@@ -7,7 +7,7 @@ class LandingMenu extends React.Component {
     return(
       <div className="content">
         <div className="menu landing-menu">
-          <div className="options">
+          <div className="landing-options">
             <h3>MENU</h3>
             <p>1. ABOUT</p>
             <p>2. DEMO</p>
@@ -24,7 +24,7 @@ class MainMenu extends React.Component {
     return (
       <div className="content">
         <div className="menu main-menu">
-          <div className="options">
+          <div className="main-options">
             <h3>MENU</h3>
             <p>1. FORUM</p>
             <p>2. BUNDLE</p>
