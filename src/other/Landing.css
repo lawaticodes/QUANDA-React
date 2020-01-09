@@ -4,14 +4,12 @@ h1 {
 }
 
 .landing {
-  border-style: solid;
   font-size: x-large;
   margin: 0px;
   text-align: left;
 }
 
 .landing-buttons {
-  border-style: solid;
   font-size: medium;
   margin-top: 8vh;
 }

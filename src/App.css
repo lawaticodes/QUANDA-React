@@ -24,7 +24,6 @@ body {
 .button:focus {outline: 0}
 
 .content {
-  border-style: solid;
   height: 97vh;
   margin-right: 5vw;
   width: 90vw;
@@ -47,13 +46,11 @@ body {
 .link {cursor: pointer}
 
 .main-container {
-  border-style: solid;
   height: 99vh;
   width: 99vw;
 }
 
 .menu-container {
-  border-style: solid;
   font-size: 41px;
   height: 97vh;
   width: 5vw;

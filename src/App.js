@@ -49,12 +49,10 @@ class Quanda extends React.Component {
   }
 
   render() {
-    if (this.state.loggedIn) {
-      return(<Homepage menuOpen={this.state.menuOpen} clickMenu={this.clickMenu}/>);
-    }
-
     let content;
-    if (this.state.menuOpen) {
+    if (this.state.loggedIn) {
+      content = <Homepage menuOpen={this.state.menuOpen} clickMenu={this.clickMenu}/>
+    } else if (this.state.menuOpen) {
       content = <LandingMenu clickMenu={this.clickMenu}/>
     } else if (this.state.loggingIn) {
       content = <LogInForm handleLoggedIn={this.handleLoggedIn}/>

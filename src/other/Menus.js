@@ -5,14 +5,12 @@ import './Menus.css';
 class LandingMenu extends React.Component {
   render() {
     return(
-      <div className="content flex">
-        <div className="menu landing-menu">
-          <div className="landing-options">
-            <h3>MENU</h3>
-            <p>1. ABOUT</p>
-            <p>2. DEMO</p>
-            <p className="link" onClick={this.props.clickMenu}>3. CLOSE</p>
-          </div>
+      <div className="menu landing-menu">
+        <div className="landing-options">
+          <h3>MENU</h3>
+          <p>1. ABOUT</p>
+          <p>2. DEMO</p>
+          <p className="link" onClick={this.props.clickMenu}>3. CLOSE</p>
         </div>
       </div>
     );
@@ -22,16 +20,14 @@ class LandingMenu extends React.Component {
 class MainMenu extends React.Component {
   render() {
     return (
-      <div className="content flex">
-        <div className="menu main-menu">
-          <div className="main-options">
-            <h3>MENU</h3>
-            <p>1. FORUM</p>
-            <p>2. BUNDLE</p>
-            <p>3. RELEASE</p>
-            <p>4. ABOUT</p>
-            <p className="link" onClick={this.props.clickMenu}>5. CLOSE</p>
-          </div>
+      <div className="menu main-menu">
+        <div className="main-options">
+          <h3>MENU</h3>
+          <p>1. FORUM</p>
+          <p>2. BUNDLE</p>
+          <p>3. RELEASE</p>
+          <p>4. ABOUT</p>
+          <p className="link" onClick={this.props.clickMenu}>5. CLOSE</p>
         </div>
       </div>
     );
