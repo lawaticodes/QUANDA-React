@@ -12,16 +12,16 @@ class Homepage extends React.Component {
     }
 
     return(
-      <React.Fragment>
-        <div className="menu-icon-wrapper link">
-          <Icon type="menu" className="menu-icon" onClick={this.props.clickMenu}/>
+      <div className="main-container flex">
+        <div className="menu-container flex">
+          <Icon type="menu" className="menu-icon link" onClick={this.props.clickMenu}/>
         </div>
-        <div className="content">
+        <div className="content flex">
           <div className="profile">
             <img className="avatar" src="insert_image_here.jpg"/>
             <p>TINA LIMBU</p>
           </div>
-          <div className="notifications">
+          <div className="notifications flex">
             <div className="forum-notifications">
               <p>FORUM:</p>
               <p>0 unread notifications</p>
@@ -32,7 +32,7 @@ class Homepage extends React.Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
