@@ -5,7 +5,7 @@ import './Menus.css';
 class LandingMenu extends React.Component {
   render() {
     return(
-      <div className="content">
+      <div className="content flex">
         <div className="menu landing-menu">
           <div className="landing-options">
             <h3>MENU</h3>
@@ -22,7 +22,7 @@ class LandingMenu extends React.Component {
 class MainMenu extends React.Component {
   render() {
     return (
-      <div className="content">
+      <div className="content flex">
         <div className="menu main-menu">
           <div className="main-options">
             <h3>MENU</h3>

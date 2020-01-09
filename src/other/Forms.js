@@ -15,7 +15,7 @@ class LogInForm extends React.Component {
 
   render() {
     return(
-      <form className="log-in-form">
+      <form className="log-in-form flex">
         <p className="title">LOG IN</p>
         <div>
           <div>
@@ -25,7 +25,7 @@ class LogInForm extends React.Component {
             <label>Password:<Input className="input" placeholder="Please enter your password."/></label>
           </div>
         </div>
-        <Button className="form-button button" onClick={this.submit}>SUBMIT</Button>
+        <Button className="button" onClick={this.submit}>SUBMIT</Button>
       </form>
     );
   }
@@ -43,8 +43,8 @@ class SignUpForm extends React.Component {
 
   render() {
     return(
-      <form className="sign-in-form">
-        <p className="title">SIGN IN</p>
+      <form className="sign-in-form flex">
+        <p className="title">SIGN UP</p>
         <div>
           <div>
             <label>Username:<Input className="input" placeholder="Please enter your username."/></label>
@@ -59,7 +59,7 @@ class SignUpForm extends React.Component {
             <label>Email:<Input className="input" placeholder="Please enter your email."/></label>
           </div>
         </div>
-        <Button className="form-button button" onClick={this.submit}>SUBMIT</Button>
+        <Button className="button" onClick={this.submit}>SUBMIT</Button>
       </form>
     );
   }

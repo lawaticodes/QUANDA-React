@@ -65,14 +65,14 @@ class Quanda extends React.Component {
     }
 
     return (
-      <React.Fragment>
-        <div className="menu-icon-wrapper link">
-          <Icon type="menu" className="menu-icon" onClick={this.clickMenu}/>
+      <div className="main-container flex">
+        <div className="menu-container flex">
+          <Icon type="menu" className="menu-icon link" onClick={this.clickMenu}/>
         </div>
-        <div className="content">
+        <div className="content flex">
           {content}
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
