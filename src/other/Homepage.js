@@ -8,13 +8,13 @@ import './Homepage.css';
 class Homepage extends React.Component {
   render() {
     if (this.props.menuOpen) {
-      return(<MainMenu handleMenuClick={this.props.handleMenuClick}/>);
+      return(<MainMenu clickMenu={this.props.clickMenu}/>);
     }
 
     return(
       <React.Fragment>
         <div className="menu-icon-wrapper link">
-          <Icon type="menu" className="menu-icon" onClick={this.props.handleMenuClick}/>
+          <Icon type="menu" className="menu-icon" onClick={this.props.clickMenu}/>
         </div>
         <div className="content">
           <div className="profile">

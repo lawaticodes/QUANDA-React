@@ -6,10 +6,10 @@ import './Forms.css';
 class LogInForm extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
-  handleSubmit() {
+  submit() {
     this.props.handleLoggedIn()
   }
 
@@ -25,7 +25,7 @@ class LogInForm extends React.Component {
             <label>Password:<Input className="input" placeholder="Please enter your password."/></label>
           </div>
         </div>
-        <Button className="form-button button" onClick={this.handleSubmit}>SUBMIT</Button>
+        <Button className="form-button button" onClick={this.submit}>SUBMIT</Button>
       </form>
     );
   }
@@ -34,10 +34,10 @@ class LogInForm extends React.Component {
 class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
-  handleSubmit() {
+  submit() {
     this.props.handleSignedUp()
   }
 
@@ -59,7 +59,7 @@ class SignUpForm extends React.Component {
             <label>Email:<Input className="input" placeholder="Please enter your email."/></label>
           </div>
         </div>
-        <Button className="form-button button" onClick={this.handleSubmit}>SUBMIT</Button>
+        <Button className="form-button button" onClick={this.submit}>SUBMIT</Button>
       </form>
     );
   }
