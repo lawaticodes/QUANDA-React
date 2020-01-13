@@ -1,4 +1,5 @@
 import { Button, Input } from 'antd';
+import axios from 'axios';
 import React from 'react';
 
 import './Forms.css';
@@ -10,7 +11,8 @@ class LogInForm extends React.Component {
   }
 
   submit() {
-    this.props.handleLoggedIn()
+    this.props.handleLoggedIn();
+    axios.get("http://127.0.0.1:8000/login/");
   }
 
   render() {
@@ -38,7 +40,8 @@ class SignUpForm extends React.Component {
   }
 
   submit() {
-    this.props.handleSignedUp()
+    this.props.handleSignedUp();
+    axios.get("http://127.0.0.1:8000/signup/");
   }
 
   render() {
