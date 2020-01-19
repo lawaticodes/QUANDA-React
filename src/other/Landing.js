@@ -1,4 +1,4 @@
-import { Button, Icon } from 'antd';
+import { Button } from 'antd';
 import React from 'react';
 
 import Homepage from './Homepage.js';
