@@ -1,15 +1,9 @@
 import { Button } from 'antd';
 import React from 'react';
 
-import Homepage from './Homepage.js';
-
 import './Landing.css';
 
 class Landing extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
 	render() {
     return(
       <div className="landing">
