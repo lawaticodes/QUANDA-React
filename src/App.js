@@ -57,7 +57,7 @@ class Quanda extends React.Component {
     } else if (this.state.loggingIn) {
       content = <LogInForm handleLoggedIn={this.handleLoggedIn}/>
     } else if (this.state.signingUp) {
-      content = <SignUpForm handleSignedUp={this.handleSignedUp}/>
+      content = <SignUpForm/>
     } else {
       content = <Landing loggedIn={this.state.loggedIn} logIn={this.logIn} signUp={this.signUp}/>
     }

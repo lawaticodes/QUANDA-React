@@ -36,44 +36,64 @@ class LogInForm extends React.Component {
 class SignUpForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      submitted: false,
+      error: ""
+    }
+
     this.submit = this.submit.bind(this);
   }
 
-  submit() {
+  submit = async () => {
     let userInput = {
       username: document.getElementById("username").value,
       password1: document.getElementById("password1").value,
       password2: document.getElementById("password2").value,
       email: document.getElementById("email").value
     };
-    axios.post(
-      "http://127.0.0.1:8000/signup/create_user/", null, {params: userInput}
-    ).then(function(response) {
-      console.log(response);
-    });
-    this.props.handleSignedUp();
+
+    try {
+      const response = await axios.post("http://127.0.0.1:8000/signup/create_user/", null, {params: userInput});
+      this.setState({submitted: true});
+    } catch (error) {
+      this.setState({submitted: true, error: error.response.data.message});
+    }
   }
 
   render() {
+    let content;
+
+    if (this.state.submitted) {
+      if (this.state.error) {
+        content = this.state.error
+      } else {
+        content = "Sign up successful. Please check your email and click on the confirmation link to complete your registration."
+      }
+    } else {
+      content = (
+        <form className="sign-in-form flex">
+          <p className="title">SIGN UP</p>
+          <div>
+            <div>
+              <label>Username:<Input className="input" id="username" placeholder="Please enter your username."/></label>
+            </div>
+            <div>
+              <label>Password:<Input className="input" id="password1" placeholder="Please enter your password."/></label>
+            </div>
+            <div>
+              <label>Re-enter password:<Input className="input" id="password2" placeholder="Please re-enter your password."/></label>
+            </div>
+            <div>
+              <label>Email:<Input className="input" id="email" placeholder="Please enter your email."/></label>
+            </div>
+          </div>
+          <Button className="button" onClick={this.submit}>SUBMIT</Button>
+        </form>
+      )
+    }
+
     return(
-      <form className="sign-in-form flex">
-        <p className="title">SIGN UP</p>
-        <div>
-          <div>
-            <label>Username:<Input className="input" id="username" placeholder="Please enter your username."/></label>
-          </div>
-          <div>
-            <label>Password:<Input className="input" id="password1" placeholder="Please enter your password."/></label>
-          </div>
-          <div>
-            <label>Re-enter password:<Input className="input" id="password2" placeholder="Please re-enter your password."/></label>
-          </div>
-          <div>
-            <label>Email:<Input className="input" id="email" placeholder="Please enter your email."/></label>
-          </div>
-        </div>
-        <Button className="button" onClick={this.submit}>SUBMIT</Button>
-      </form>
+      <div>{content}</div>
     );
   }
 }
