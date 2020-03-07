@@ -55,6 +55,10 @@ class SignUpForm extends React.Component {
     try {
       const response = await axios.post("http://127.0.0.1:8000/signup/create_user/", null, {params: userInput});
       this.setState({submitted: true});
+
+      if (response.status == 200) {
+        this.setState({error: ""});
+      }
     } catch (error) {
       this.setState({submitted: true, error: error.response.data.message});
     }
