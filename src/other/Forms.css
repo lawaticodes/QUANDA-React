@@ -23,6 +23,11 @@ form {
   width: 55vw;
 }
 
+.sign-up-message{
+  font-size: small;
+  width: 55vw;
+}
+
 .title {
   font-size: x-large;
   margin-top: 5vh;

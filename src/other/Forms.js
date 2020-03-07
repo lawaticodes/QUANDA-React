@@ -61,40 +61,41 @@ class SignUpForm extends React.Component {
   }
 
   render() {
-    let content;
+    const signUpForm = (
+      <form className="sign-in-form flex">
+        <p className="title">SIGN UP</p>
+        <div>
+          <div>
+            <label>Username:<Input className="input" id="username" placeholder="Please enter your username."/></label>
+          </div>
+          <div>
+            <label>Password:<Input className="input" id="password1" placeholder="Please enter your password."/></label>
+          </div>
+          <div>
+            <label>Re-enter password:<Input className="input" id="password2" placeholder="Please re-enter your password."/></label>
+          </div>
+          <div>
+            <label>Email:<Input className="input" id="email" placeholder="Please enter your email."/></label>
+          </div>
+        </div>
+        <Button className="button" onClick={this.submit}>SUBMIT</Button>
+      </form>
+    );
 
     if (this.state.submitted) {
       if (this.state.error) {
-        content = this.state.error
+        return(
+          <div>
+            {signUpForm}
+            <p className="sign-up-message">{this.state.error}</p>
+          </div>
+        );
       } else {
-        content = "Sign up successful. Please check your email and click on the confirmation link to complete your registration."
+        return(<div>Sign up successful. Please check your email and click on the confirmation link to complete your registration.</div>);
       }
     } else {
-      content = (
-        <form className="sign-in-form flex">
-          <p className="title">SIGN UP</p>
-          <div>
-            <div>
-              <label>Username:<Input className="input" id="username" placeholder="Please enter your username."/></label>
-            </div>
-            <div>
-              <label>Password:<Input className="input" id="password1" placeholder="Please enter your password."/></label>
-            </div>
-            <div>
-              <label>Re-enter password:<Input className="input" id="password2" placeholder="Please re-enter your password."/></label>
-            </div>
-            <div>
-              <label>Email:<Input className="input" id="email" placeholder="Please enter your email."/></label>
-            </div>
-          </div>
-          <Button className="button" onClick={this.submit}>SUBMIT</Button>
-        </form>
-      )
+      return(<div>{signUpForm}</div>);
     }
-
-    return(
-      <div>{content}</div>
-    );
   }
 }
 
