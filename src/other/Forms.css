@@ -24,8 +24,13 @@ form {
 }
 
 .sign-up-message{
-  font-size: small;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 55vw;
+}
+
+.sign-up-success{
+  margin-bottom: 5vh;
 }
 
 .title {
