@@ -4,7 +4,6 @@ import React from 'react';
 import { LogInForm, SignUpForm } from './other/Forms.js';
 import Homepage from './other/Homepage.js';
 import Landing from './other/Landing.js';
-import { LandingMenu } from './other/Menus.js';
 
 import './App.css';
 
@@ -27,8 +26,12 @@ class Quanda extends React.Component {
   clickMenu() {
     if (this.state.menuOpen) {
       this.setState({menuOpen: false});
+      document.getElementById("menu-option-one").style.display = "none";
+      document.getElementById("menu-option-two").style.display = "none";
     } else {
       this.setState({menuOpen: true});
+      document.getElementById("menu-option-one").style.display = "block";
+      document.getElementById("menu-option-two").style.display = "block";
     }
   }
 
@@ -50,10 +53,9 @@ class Quanda extends React.Component {
 
   render() {
     let content;
+
     if (this.state.loggedIn) {
       content = <Homepage menuOpen={this.state.menuOpen} clickMenu={this.clickMenu}/>
-    } else if (this.state.menuOpen) {
-      content = <LandingMenu clickMenu={this.clickMenu}/>
     } else if (this.state.loggingIn) {
       content = <LogInForm handleLoggedIn={this.handleLoggedIn}/>
     } else if (this.state.signingUp) {
@@ -64,8 +66,12 @@ class Quanda extends React.Component {
 
     return (
       <div className="main-container flex">
-        <div className="menu-container flex">
-          <Icon type="menu" className="menu-icon link" onClick={this.clickMenu}/>
+        <div className="menu-container-outer flex">
+          <div className="menu-container-inner">
+            <Icon type="menu" className="menu-icon link" onClick={this.clickMenu}/>
+            <p className="menu-option" id="menu-option-one" style={{display: "none"}}>ABOUT</p>
+            <p className="menu-option" id="menu-option-two" style={{display: "none"}}>DEMO</p>
+          </div>
         </div>
         <div className="content flex">
           {content}

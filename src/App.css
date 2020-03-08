@@ -46,21 +46,29 @@ body {
 .link {cursor: pointer}
 
 .main-container {
+  font-family: 'league_monosemibold';
   height: 99vh;
   width: 99vw;
 }
 
-.menu-container {
+.menu-container-inner{
+  align-self: flex-start;
   font-size: 41px;
-  height: 97vh;
+  height: 10vh;
+  margin-top: 2vw;
   width: 5vw;
 }
 
-.menu-icon {
-  align-self: flex-start;
+.menu-container-outer {
+  height: 97vh;
   margin-left: 1vw;
-  margin-right: 1vw;
-  margin-top: 2vw;
+  width: 5vw;
 }
 
 .menu-icon:focus {outline: 0}
+
+.menu-option {
+  color: white;
+  font-size: medium;
+  padding: 2px;
+}
