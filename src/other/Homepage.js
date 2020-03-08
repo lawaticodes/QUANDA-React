@@ -1,15 +1,9 @@
 import React from 'react';
 
-import { MainMenu } from './Menus.js';
-
 import './Homepage.css';
 
 class Homepage extends React.Component {
   render() {
-    if (this.props.menuOpen) {
-      return(<MainMenu clickMenu={this.props.clickMenu}/>);
-    }
-
     return(
       <React.Fragment>
         <div className="profile">
