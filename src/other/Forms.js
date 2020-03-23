@@ -21,7 +21,7 @@ class LogInForm extends React.Component {
         <p className="title">LOG IN</p>
         <div>
           <div>
-            <label>Username:<Input className="input" placeholder="Please enter your username."/></label>
+            <label>Name:<Input className="input" placeholder="Please enter your name."/></label>
           </div>
           <div>
             <label>Password:<Input className="input" placeholder="Please enter your password."/></label>
@@ -47,7 +47,7 @@ class SignUpForm extends React.Component {
 
   submit = async () => {
     let userInput = {
-      username: document.getElementById("username").value,
+      name: document.getElementById("name").value,
       password1: document.getElementById("password1").value,
       password2: document.getElementById("password2").value,
       email: document.getElementById("email").value
@@ -75,7 +75,7 @@ class SignUpForm extends React.Component {
         <p className="title">SIGN UP</p>
         <div>
           <div>
-            <label>Username:<Input className="input" id="username" placeholder="Please enter your username."/></label>
+            <label>Name:<Input className="input" id="name" placeholder="Please enter your name."/></label>
           </div>
           <div>
             <label>Password:<Input className="input" id="password1" placeholder="Please enter your password."/></label>
