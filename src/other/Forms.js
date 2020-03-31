@@ -7,29 +7,52 @@ import './Forms.css';
 class LogInForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      error: ""
+    }
     this.submit = this.submit.bind(this);
   }
 
-  submit() {
-    this.props.handleLoggedIn();
-    axios.get("http://127.0.0.1:8000/login/");
+  submit = async () => {
+    let request_url = "http://127.0.0.1:8000/login/log_in/";
+    request_url += `?email=${document.getElementById("email").value}&password=${document.getElementById("password").value}`;
+
+    try {
+      const response = await axios.get(request_url);
+      if (response.status == 200) {
+        this.props.handleLoggedIn();
+      }
+    } catch (error) {
+      this.setState({error: error.response.data.message});
+    }
   }
 
   render() {
-    return(
+    const logInForm = (
       <form className="log-in-form flex">
         <p className="title">LOG IN</p>
         <div>
           <div>
-            <label>Name:<Input className="input" placeholder="Please enter your name."/></label>
+            <label>Email:<Input className="input" id="email" placeholder="Please enter your email."/></label>
           </div>
           <div>
-            <label>Password:<Input className="input" placeholder="Please enter your password."/></label>
+            <label>Password:<Input className="input" id="password" placeholder="Please enter your password."/></label>
           </div>
         </div>
         <Button className="button" onClick={this.submit}>SUBMIT</Button>
       </form>
     );
+
+    if (this.state.error) {
+      return(
+        <div className="log-in-message">
+          {logInForm}
+          <p>{this.state.error}</p>
+        </div>
+      );
+    } else {
+      return(<div>{logInForm}</div>);
+    }
   }
 }
 
@@ -102,7 +125,7 @@ class SignUpForm extends React.Component {
       } else {
         return(
           <div className="flex sign-up-message">
-            <p className="sign-up-success"> Sign up successful. Please check your email and click on the confirmation link to complete your registration.</p>
+            <p className="sign-up-success">Sign up successful. Please check your email and click on the confirmation link to complete your registration.</p>
             <Button className="button" onClick={this.goToHomePage}>HOME</Button>
           </div>
         );

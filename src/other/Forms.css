@@ -18,6 +18,12 @@ form {
   width: 47vw;
 }
 
+.log-in-message{
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+
 .sign-in-form {
   height: 65vh;
   width: 55vw;
