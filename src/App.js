@@ -1,9 +1,9 @@
 import { Icon } from 'antd';
 import React from 'react';
 
-import { LogInForm, SignUpForm } from './quanda/Forms.js';
-import Homepage from './quanda/Homepage.js';
-import Landing from './quanda/Landing.js';
+import { LogInForm, SignUpForm } from './main_app/Forms.js';
+import Homepage from './main_app/Homepage.js';
+import Landing from './main_app/Landing.js';
 
 import './App.css';
 
