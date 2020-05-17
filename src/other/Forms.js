@@ -46,7 +46,7 @@ class LogInForm extends React.Component {
             <label>Email:<Input className="input" id="email" placeholder="Please enter your email."/></label>
           </div>
           <div>
-            <label>Password:<Input className="input" id="password" placeholder="Please enter your password."/></label>
+            <label>Password:<Input className="input" id="password" type="password" placeholder="Please enter your password."/></label>
           </div>
         </div>
         <Button className="button" onClick={this.submit}>SUBMIT</Button>
@@ -111,10 +111,10 @@ class SignUpForm extends React.Component {
             <label>Name:<Input className="input" id="name" placeholder="Please enter your name."/></label>
           </div>
           <div>
-            <label>Password:<Input className="input" id="password1" placeholder="Please enter your password."/></label>
+            <label>Password:<Input className="input" id="password1" type="password" placeholder="Please enter your password."/></label>
           </div>
           <div>
-            <label>Re-enter password:<Input className="input" id="password2" placeholder="Please re-enter your password."/></label>
+            <label>Re-enter password:<Input className="input" id="password2" type="password" placeholder="Please re-enter your password."/></label>
           </div>
           <div>
             <label>Email:<Input className="input" id="email" placeholder="Please enter your email."/></label>
