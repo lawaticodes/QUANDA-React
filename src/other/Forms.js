@@ -4,6 +4,16 @@ import React from 'react';
 
 import './Forms.css';
 
+function getErrorMessage(error) {
+  if (error.response) {
+    return error.response.data.message;
+  } else if (error.message === "Network Error") {
+    return "Encountered a network error. Please check your connection and load the page again.";
+  } else {
+    return "Encountered an unexpected error. Please load the page again.";
+  }
+}
+
 class LogInForm extends React.Component {
   constructor(props) {
     super(props);
@@ -19,11 +29,11 @@ class LogInForm extends React.Component {
 
     try {
       const response = await axios.get(request_url);
-      if (response.status == 200) {
+      if (response.status === 200) {
         this.props.handleLoggedIn();
       }
     } catch (error) {
-      this.setState({error: error.response.data.message});
+      this.setState({error: getErrorMessage(error)});
     }
   }
 
@@ -80,11 +90,11 @@ class SignUpForm extends React.Component {
       const response = await axios.post("http://127.0.0.1:8000/signup/create_user/", null, {params: userInput});
       this.setState({submitted: true});
 
-      if (response.status == 200) {
+      if (response.status === 200) {
         this.setState({error: ""});
       }
     } catch (error) {
-      this.setState({submitted: true, error: error.response.data.message});
+      this.setState({submitted: true, error: getErrorMessage(error)});
     }
   }
 
